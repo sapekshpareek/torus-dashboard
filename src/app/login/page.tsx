@@ -18,7 +18,7 @@ export default function LoginPage() {
         try {
             await dispatch(loginUser({ email, password })).unwrap();
             router.push('/dashboard');
-        } catch (err) {
+        } catch {
             // Error is handled in the reducer
         }
     };
